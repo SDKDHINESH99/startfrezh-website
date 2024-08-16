@@ -3,7 +3,7 @@ function onClick(element){
     
     //document.getElementById("imgval").src=element.src;
     var filename=element.src;
-    filename=filename.replace("http://127.0.0.1:5500/assets/blender","../assets/blender/sprite");
+    filename=filename.replace("http://127.0.0.1:5500/assets/blender","/assets/blender/sprite");
    // console.log(filename)
  
     var contvalu=document.getElementsByClassName("animimg")[0];

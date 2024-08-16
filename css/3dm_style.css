@@ -301,26 +301,29 @@ body{
     align-items: center;
     justify-content: space-around;
     position: relative;
-    width: 90%;
+    width: 100%;
+    overflow: auto
 }
 .complogofoot{
     width: 80px;;
     height: auto;
     padding: 5px;
-    -webkit-filter: drop-shadow(0px 0px .5px #222);
-    filter: drop-shadow(0x 0px .5px #222);
+    -webkit-filter: drop-shadow(0px 0px .5px #000000);
+    filter: drop-shadow(0x 0px .5px #000000);
 }
 .footmenu ul{
     display: flex;
+    text-wrap: nowrap;
 
 }
 .footmenu ul li{
     list-style: none;
     display: inline;
-    margin: 10px 10px;
-    padding: 5px 5px;
+    margin: 10px auto ;
+    padding: 5px 9px;
     font-weight: bold;
     color: var(--color1);
+
 }
 .footmenu ul li a{
     text-decoration: none;
@@ -330,7 +333,7 @@ body{
 .copywrite{
     display: flex;
     position: absolute;
-    right:0%;
+    right:5%;
     color: var(--color1);
     font-weight: 100;
     font-size: 10px;
@@ -341,6 +344,7 @@ body{
     background-color: var(--color2);
     border-radius: 5px;
 }
+
 
 @media (max-width:850px) {
     .footbar{
@@ -378,20 +382,32 @@ body{
     background-color:rgba(8, 28, 21,.6);
     backdrop-filter:blur(10px);
     overflow: auto;
+
 }
 
+.imgincont{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
 .animimg{
-    margin: 15% auto;
-    width:90%;
-    max-width: 900px;
-    top: 10%;
-    padding: 5%;
-    transform: scale(2);
-    align-items: center;
+    margin: 5% auto;
+    height: 100vmin;
+    width: 100vmin;
     animation: zoomanim .5s linear;
     border-radius: 10px;
     
 
+}
+
+@media (min-width:750px) {
+    .animimg{
+        transform: scale(2);
+    }
+    
 }
 
 @keyframes zoomanim {
@@ -425,13 +441,7 @@ body{
     font-size: 60px;
     font-weight: bold;
     transition: 0.3s;
-    z-index: 15;
+    z-index: 5;
 }
 
-@media only screen and (max-width:700px) {
-    .imgpre{
-        width: 100%;
-    }
-    
-}
 
